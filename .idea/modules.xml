@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/codewithapi.iml" filepath="$PROJECT_DIR$/.idea/codewithapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codewithapi/codewithapi.iml" filepath="$PROJECT_DIR$/codewithapi/codewithapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/codewithapi_liquibase.iml" filepath="$PROJECT_DIR$/.idea/codewithapi_liquibase.iml" />
     </modules>
   </component>
 </project>
