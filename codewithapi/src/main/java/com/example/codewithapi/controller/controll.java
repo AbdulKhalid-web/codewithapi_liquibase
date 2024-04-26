@@ -51,7 +51,6 @@ public class controll {
 }
 */
 
-/*
 import com.example.codewithapi.product.Product;
 import com.example.codewithapi.serives.servies;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,17 +70,11 @@ public class controll {
     }
     @GetMapping("/products")
     public List<Product> getProductList() {
-        try{
-        return servies.listall();}
-        catch (Exception e){
-            e.printStackTrace();
-            return null;
-        }
+        return servies.listall();
     }
 
-    @GetMapping("/products/{id}")
-//    public Product getProduct(@RequestParam int id) {
-    public Product getProduct(@PathVariable int id) {
+    @GetMapping("/products/id")
+    public Product getProduct(@RequestParam int id) {
         return  servies.getProduct(id);
     }
 
@@ -96,80 +89,7 @@ public class controll {
         servies.deletepro(id) ;
     }
 
-    @PutMapping("/products/{id}")
-    public String update(@RequestBody Product product, @PathVariable int id) {
-        return servies.update(id, product);
-    }
-}
 
- */
 
-import com.example.codewithapi.product.Product;
-import com.example.codewithapi.serives.servies;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
-@RestController
-@RequestMapping("/products")
-public class controll{
-
-    @Autowired
-    private servies servies;
-
-    @GetMapping("/home")
-    public String home() {
-        return "Welcome to the product API";
-    }
-
-    @GetMapping
-    public List<Product> getAllProducts() {
-        try {
-            return servies.listall();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    @GetMapping("/{id}")
-    public Product getProductById(@PathVariable int id) {
-        try {
-            return servies.getProduct(id);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    @PostMapping
-    public Product addProduct(@RequestBody Product product) {
-        try {
-            servies.save(product);
-            return product;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    @DeleteMapping("/{id}")
-    public void deleteProduct(@PathVariable int id) {
-        try {
-            servies.deletepro(id);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @PutMapping("/{id}")
-    public String updateProduct(@RequestBody Product product, @PathVariable int id) {
-        try {
-            return servies.update(id, product);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "Error updating product";
-        }
-    }
 }
