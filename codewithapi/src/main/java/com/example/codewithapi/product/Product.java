@@ -13,11 +13,12 @@ public class Product {
     private int id;
     private String name;
     private int model;
-    private String description;
+    private String description = " "; // Set default value to empty string
 
     public Product() {
     }
-
+   @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {
         return id;
     }
