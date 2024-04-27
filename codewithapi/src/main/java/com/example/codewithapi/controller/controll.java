@@ -104,8 +104,11 @@ public class controll {
 
  */
 
+<<<<<<< HEAD
 /*
 import com.example.codewithapi.product.Product;
+=======
+>>>>>>> ac8073bb527029a75a2be63c217e15db95c74bad
 import com.example.codewithapi.product.Product;
 import com.example.codewithapi.serives.servies;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -174,6 +177,7 @@ public class controll{
             return "Error updating product";
         }
     }
+<<<<<<< HEAD
 }
 */
 
@@ -232,3 +236,6 @@ public class controll {
         return ResponseEntity.ok(message);
     }
 }
+=======
+}
+>>>>>>> ac8073bb527029a75a2be63c217e15db95c74bad
