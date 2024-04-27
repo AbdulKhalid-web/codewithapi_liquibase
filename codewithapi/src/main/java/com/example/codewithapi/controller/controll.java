@@ -104,7 +104,6 @@ public class controll {
 
  */
 
-<<<<<<< HEAD
 /*
 import com.example.codewithapi.product.Product;
 =======
@@ -236,6 +235,3 @@ public class controll {
         return ResponseEntity.ok(message);
     }
 }
-=======
-}
->>>>>>> ac8073bb527029a75a2be63c217e15db95c74bad
